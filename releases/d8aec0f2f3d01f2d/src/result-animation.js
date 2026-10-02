@@ -1,0 +1,109 @@
+const MANIFEST = new URL('../assets/character/results-standing-v3/animation.json', import.meta.url);
+
+// A single clock plays an optional lead-in and then repeats the complete
+// authored action. The manifest defines the loop's pose and frame boundaries.
+export class ResultAnimation {
+  constructor() {
+    this.canvas = document.createElement('canvas');
+    this.canvas.className = 'result-character result-laugh';
+    this.canvas.setAttribute('aria-hidden', 'true');
+    this.canvas.hidden = true;
+    this.ctx = this.canvas.getContext('2d');
+    this.elapsed = 0; this.frame = -1; this.loopCount = 0; this.paused = true;
+    this.generation = 0; this.images = []; this.destroyed = false;
+  }
+
+  prepare({ priority = 'auto' } = {}) {
+    if (this.meta) return Promise.resolve();
+    if (this.loading) return this.loading;
+    const controller = new AbortController(); this.controller = controller;
+    const timer = setTimeout(() => controller.abort(), 30000);
+    this.loading = (async () => {
+      const response = await fetch(MANIFEST, { signal: controller.signal, priority });
+      if (!response.ok) throw new Error('Result animation unavailable');
+      const meta = await response.json();
+      const images = [];
+      try {
+        // Bound concurrency: avoid eight network round trips in series, without
+        // asking a phone to decode every large atlas at once.
+        let next = 0;
+        const workers = await Promise.allSettled(Array.from({ length: Math.min(3, meta.pages.length) }, async () => {
+          while (next < meta.pages.length && !controller.signal.aborted) {
+            const index = next++;
+            try {
+              const result = await fetch(new URL(meta.pages[index], MANIFEST), { signal: controller.signal, priority });
+              if (!result.ok) throw new Error('Result frame page unavailable');
+              images[index] = await createImageBitmap(await result.blob());
+            } catch (error) { controller.abort(); throw error; }
+          }
+        }));
+        const failure = workers.find(result => result.status === 'rejected');
+        if (failure) throw failure.reason;
+        if (this.destroyed || controller.signal.aborted) throw new Error('Result animation cancelled');
+        this.images = images; this.meta = meta;
+        this.canvas.width = meta.size; this.canvas.height = meta.size;
+      } catch (error) { images.forEach(image => image.close()); throw error; }
+    })().finally(() => { clearTimeout(timer); this.loading = null; });
+    return this.loading;
+  }
+
+  reset() { this.pause(); this.elapsed = 0; this.frame = -1; this.loopCount = 0; this.canvas.hidden = true; }
+
+  // Include time since the last rendered frame when another media source joins
+  // this timeline, such as after re-enabling sound in the middle of a laugh.
+  get currentTime() {
+    if (!this.paused && this.clock) return this.clock();
+    return this.elapsed + (this.paused ? 0 : Math.max(0, (performance.now() - this.lastTime) / 1000));
+  }
+
+  // Sound owns the timeline while audible. Muting hands the same position back
+  // to the visual clock, so neither a mute nor a delayed download restarts it.
+  setClock(clock) {
+    this.elapsed = this.currentTime;
+    this.lastTime = performance.now();
+    this.clock = clock;
+  }
+
+  async resume() {
+    const generation = this.generation;
+    await this.prepare();
+    if (generation !== this.generation || this.destroyed) return false;
+    if (!this.paused) return true;
+    this.paused = false; this.canvas.dataset.playing = 'true';
+    this.lastTime = performance.now();
+    this.draw(this.elapsed);
+    const tick = now => {
+      if (this.paused || this.destroyed) return;
+      // Skipped rendering frames must not slow a long audio-backed action.
+      // Background suspension is handled explicitly by pause()/resume().
+      this.elapsed = this.currentTime; this.lastTime = performance.now();
+      this.draw(this.elapsed); this.raf = requestAnimationFrame(tick);
+    };
+    this.raf = requestAnimationFrame(tick);
+    return true;
+  }
+
+  draw(seconds) {
+    if (!this.meta) return;
+    const { fps, introFrames, loopFrames, framesPerPage, columns, size, loopPhase } = this.meta;
+    const absolute = Math.floor(Math.max(0, seconds) * fps + 1e-6);
+    const looping = absolute >= introFrames;
+    const frame = looping ? introFrames + (absolute - introFrames) % loopFrames : absolute;
+    this.loopCount = looping ? Math.floor((absolute - introFrames) / loopFrames) : 0;
+    this.canvas.dataset.phase = looping ? loopPhase || 'loop' : 'intro';
+    if (frame === this.frame) return;
+    this.frame = frame; this.canvas.dataset.frame = String(frame);
+    const page = Math.floor(frame / framesPerPage), cell = frame % framesPerPage;
+    this.ctx.clearRect(0, 0, size, size);
+    this.ctx.drawImage(this.images[page], (cell % columns) * size, Math.floor(cell / columns) * size, size, size, 0, 0, size, size);
+  }
+
+  pause() {
+    if (!this.paused) this.elapsed = this.currentTime;
+    this.generation++; this.paused = true; cancelAnimationFrame(this.raf); this.canvas.dataset.playing = 'false';
+  }
+  destroy() {
+    this.destroyed = true; this.pause(); this.controller?.abort();
+    this.images.forEach(image => image.close()); this.images = []; this.meta = null;
+  }
+}
