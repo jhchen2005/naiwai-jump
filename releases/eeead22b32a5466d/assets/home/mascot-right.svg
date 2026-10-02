@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="307.847769" height="370" viewBox="1114 77 634 762" data-content-bounds="1114 77 634 762" role="img" aria-labelledby="right-title" overflow="hidden">
+  <title id="right-title">奶娃 · 马步抬掌</title>
+  <desc>依据人物四视图生成的透明 PNG 人物图层；文字和布局可编辑，人物并非矢量路径。统一可见高度为 370。</desc>
+
+  <defs>
+    <radialGradient id="right-eye-iris" cx=".38" cy=".3" r=".78"><stop stop-color="#98bd69"/><stop offset=".6" stop-color="#80ab57"/><stop offset="1" stop-color="#6c9648"/></radialGradient>
+    <linearGradient id="right-eye-lid-color" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#fcd052"/><stop offset="1" stop-color="#f4bf3e"/></linearGradient>
+    <clipPath id="right-eye-near-clip"><ellipse rx="24.3" ry="23.8"/></clipPath>
+    <clipPath id="right-eye-far-clip"><ellipse rx="12" ry="24" transform="rotate(-16)"/></clipPath>
+    <clipPath id="right-eye-far-visible"><path d="M-8.4-24.3C3.6-23.3 13.6-6.3 13.6 3.7 13.6 12.7 8.6 20.7 3.6 22.7-6.4 17.7-14.4-3.3-13.4-13.3-13.4-19.3-11.4-22.3-8.4-24.3Z"/></clipPath>
+  </defs>
+  <image href="characters-v4.png" x="0" y="0" width="1774" height="887" />
+  <g class="mascot-eye" data-eye="right-near" data-rx="24.3" data-ry="23.8" data-pupil-range="4" transform="translate(1384.5 144)">
+    <g clip-path="url(#right-eye-near-clip)">
+      <ellipse class="eye-iris" rx="24.3" ry="23.8" fill="url(#right-eye-iris)"/>
+      <g class="eye-pupil">
+        <ellipse cx="3.2" cy="1.6" rx="14.1" ry="14.4" fill="#08100a"/>
+        <ellipse cx="8.84" cy="-6.464000000000002" rx="2.1" ry="1.7" fill="#f7f8dd" opacity=".7"/>
+      </g>
+      <g class="eye-lid" transform="translate(0 -26.8)">
+        <path d="M-48-80H48V0Q0 3-48 0Z" fill="url(#right-eye-lid-color)"/>
+        <path d="M-48 0Q0 3 48 0" fill="none" stroke="#68643a" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path class="eye-crease" d="M-20.655 .5Q0 5 20.655 .5" fill="none" stroke="#847343" stroke-width="1.4" stroke-linecap="round" opacity="0"/>
+    </g>
+  </g>
+  <g class="mascot-eye" data-eye="right-far" data-rx="12" data-ry="24" data-pupil-range="1.2" transform="translate(1489.4 138.3)">
+    <g clip-path="url(#right-eye-far-visible)"><g clip-path="url(#right-eye-far-clip)">
+      <ellipse class="eye-iris" rx="12" ry="24" transform="rotate(-16)" fill="url(#right-eye-iris)"/>
+      <g class="eye-pupil">
+        <ellipse cx="4.2" cy="0.7" rx="9.3" ry="14.2" fill="#08100a"/>
+        <ellipse cx="7.920000000000001" cy="-7.252" rx="1.05" ry="1.1" fill="#f7f8dd" opacity=".7"/>
+      </g>
+      <g class="eye-lid" transform="translate(0 -27)">
+        <path d="M-48-80H48V0Q0 3-48 0Z" fill="url(#right-eye-lid-color)"/>
+        <path d="M-48 0Q0 3 48 0" fill="none" stroke="#68643a" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path class="eye-crease" d="M-10.2 .5Q0 5 10.2 .5" fill="none" stroke="#847343" stroke-width="1.4" stroke-linecap="round" opacity="0"/>
+    </g></g>
+  </g>
+</svg>

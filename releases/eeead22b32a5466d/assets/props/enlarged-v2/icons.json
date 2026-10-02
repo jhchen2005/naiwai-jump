@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "icons": {
+    "pogo": {
+      "file": "pogo.png",
+      "bounds": [
+        72,
+        26,
+        183,
+        289
+      ]
+    },
+    "broom": {
+      "file": "broom.png",
+      "bounds": [
+        92,
+        34,
+        165,
+        286
+      ]
+    },
+    "jetpack": {
+      "file": "jetpack.png",
+      "bounds": [
+        14,
+        49,
+        209,
+        297
+      ]
+    }
+  }
+}

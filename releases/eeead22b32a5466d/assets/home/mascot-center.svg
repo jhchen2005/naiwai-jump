@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="187.121019" height="370" viewBox="634 58 397 785" data-content-bounds="634 58 397 785" role="img" aria-labelledby="center-title" overflow="hidden">
+  <title id="center-title">奶娃 · 正面抱臂</title>
+  <desc>依据人物四视图生成的透明 PNG 人物图层；文字和布局可编辑，人物并非矢量路径。统一可见高度为 370。</desc>
+
+  <defs>
+    <radialGradient id="center-eye-iris" cx=".38" cy=".3" r=".78"><stop stop-color="#98bd69"/><stop offset=".6" stop-color="#80ab57"/><stop offset="1" stop-color="#6c9648"/></radialGradient>
+    <linearGradient id="center-eye-lid-color" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#fcd052"/><stop offset="1" stop-color="#f4bf3e"/></linearGradient>
+    <clipPath id="center-eye-left-clip"><ellipse rx="23.4" ry="24.5"/></clipPath>
+    <clipPath id="center-eye-right-clip"><ellipse rx="23.4" ry="24.5"/></clipPath>
+  </defs>
+  <image href="characters-v4.png" x="0" y="0" width="1774" height="887" />
+  <g class="mascot-eye" data-eye="center-left" data-rx="23.4" data-ry="24.5" data-pupil-range="6" transform="translate(777.5 124.5)">
+    <g clip-path="url(#center-eye-left-clip)">
+      <ellipse class="eye-iris" rx="23.4" ry="24.5" fill="url(#center-eye-iris)"/>
+      <g class="eye-pupil">
+        <ellipse cx="0" cy="2.6" rx="13.8" ry="14.2" fill="#08100a"/>
+        <ellipse cx="5.5200000000000005" cy="-5.352" rx="2.1" ry="1.7" fill="#f7f8dd" opacity=".7"/>
+      </g>
+      <g class="eye-lid" transform="translate(0 -27.5)">
+        <path d="M-48-80H48V0Q0 3-48 0Z" fill="url(#center-eye-lid-color)"/>
+        <path d="M-48 0Q0 3 48 0" fill="none" stroke="#68643a" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path class="eye-crease" d="M-19.89 .5Q0 5 19.89 .5" fill="none" stroke="#847343" stroke-width="1.4" stroke-linecap="round" opacity="0"/>
+    </g>
+  </g>
+  <g class="mascot-eye" data-eye="center-right" data-rx="23.4" data-ry="24.5" data-pupil-range="6" transform="translate(887 124.5)">
+    <g clip-path="url(#center-eye-right-clip)">
+      <ellipse class="eye-iris" rx="23.4" ry="24.5" fill="url(#center-eye-iris)"/>
+      <g class="eye-pupil">
+        <ellipse cx="0.2" cy="2.6" rx="14.1" ry="14.2" fill="#08100a"/>
+        <ellipse cx="5.840000000000001" cy="-5.352" rx="2.1" ry="1.7" fill="#f7f8dd" opacity=".7"/>
+      </g>
+      <g class="eye-lid" transform="translate(0 -27.5)">
+        <path d="M-48-80H48V0Q0 3-48 0Z" fill="url(#center-eye-lid-color)"/>
+        <path d="M-48 0Q0 3 48 0" fill="none" stroke="#68643a" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path class="eye-crease" d="M-19.89 .5Q0 5 19.89 .5" fill="none" stroke="#847343" stroke-width="1.4" stroke-linecap="round" opacity="0"/>
+    </g>
+  </g>
+</svg>
