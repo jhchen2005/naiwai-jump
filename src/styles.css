@@ -1,0 +1,1052 @@
+@charset "UTF-8";
+/* Game styles are scoped to .naiwa. The temporary page shell lives in play.css. */
+.naiwa {
+  font-family: "Microsoft YaHei", "PingFang SC", system-ui, sans-serif;
+  font-synthesis: none;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-tap-highlight-color: transparent;
+}
+.naiwa, .naiwa * { box-sizing: border-box; }
+.naiwa button, .naiwa input { font: inherit; }
+.naiwa button { cursor: pointer; touch-action: manipulation; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+.naiwa button:disabled { cursor: default; opacity: .55; }
+.naiwa button:focus-visible, .naiwa input:focus-visible { outline: 3px solid #d58348; outline-offset: 3px; }
+.naiwa button:active:not(:disabled) { transform: translateY(2px); }
+.naiwa[hidden], .naiwa [hidden] { display: none !important; }
+.naiwa .build-version { margin: 14px 0 0; text-align: center; font-size: 11px; line-height: 1.5; color: #738b79; }
+
+.naiwa {
+  width: min(100%,430px);
+  height: 100dvh;
+  max-height: 920px;
+  outline: none;
+  position: relative;
+  color: #263f3d;
+}
+
+.naiwa .game-frame {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: #f8f6e9;
+  position: relative;
+}
+
+.naiwa .brand-bar {
+  height: 58px;
+  min-height: 58px;
+  padding: 0 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #263f3d18;
+  background: #faf8ed;
+  z-index: 1;
+}
+
+.naiwa .wordmark {
+  font-size: 19px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.naiwa .brand-star {
+  font-size: 27px;
+  line-height: 1;
+  color: #ad653d;
+}
+
+.naiwa .edition {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #708078;
+}
+
+.naiwa .playfield {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.naiwa .playfield canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+}
+
+.naiwa .hud {
+  position: absolute;
+  inset: 20px 22px auto;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.naiwa .height {
+  display: flex;
+  flex-direction: column;
+}
+
+.naiwa .height>span {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #6e8478;
+}
+
+.naiwa .height strong {
+  font-family: ui-rounded,"Arial Rounded MT Bold",system-ui,sans-serif;
+  font-size: 38px;
+  line-height: 1.2;
+  letter-spacing: -1.8px;
+  font-weight: 850;
+  font-variant-numeric: tabular-nums;
+}
+
+.naiwa .height .difficulty-label {
+  margin-top: 3px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: #526e52;
+}
+.naiwa .height .difficulty-label[data-stage="2"] { color: #926221; }
+.naiwa .height .difficulty-label[data-stage="3"],
+.naiwa .height .difficulty-label[data-stage="4"] { color: #a04b44; }
+
+.naiwa .height small {
+  font-size: 15px;
+  letter-spacing: 0;
+  margin-left: 5px;
+  color: #6e8478;
+  font-weight: 500;
+}
+
+.naiwa .pause-button {
+  pointer-events: auto;
+  border: 1.5px solid #263f3d;
+  background: #fffdf1dd;
+  color: #263f3d;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  font-size: 22px;
+  font-weight: 700;
+  box-shadow: 0 3px 0 #263f3d12;
+}
+
+.naiwa .control-bar {
+  min-height: 94px;
+  padding: 14px 22px max(14px,env(safe-area-inset-bottom));
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #263f3d1a;
+  background: #faf8ed;
+  gap: 10px;
+}
+
+.naiwa .direction-button {
+  width: 86px;
+  height: 61px;
+  flex-shrink: 0;
+  border: 1.5px solid #263f3d;
+  border-radius: 18px;
+  background: #fffdf1;
+  box-shadow: 0 4px 0 #bdc9b5;
+  font-size: 34px;
+  line-height: 1;
+  color: #263f3d;
+  touch-action: none;
+  transition: background 90ms,transform 90ms;
+}
+
+.naiwa .direction-button.held {
+  background: #f6d75d;
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.naiwa .direction-button:disabled {
+  opacity: .28;
+}
+
+.naiwa .control-caption {
+  text-align: center;
+  line-height: 1.8;
+  white-space: nowrap;
+}
+
+.naiwa .control-caption strong {
+  display: block;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.naiwa .control-caption span {
+  font-size: 10px;
+  color: #7a887b;
+}
+
+.naiwa .control-bar[data-mode="tilt"] [data-direction] {
+  display: none;
+}
+
+.naiwa .control-bar[data-mode="tilt"] {
+  justify-content: center;
+}
+
+.naiwa .overlay {
+  position: absolute;
+  inset: 0;
+  background: #f4f5eacd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px;
+  overflow: auto;
+  overscroll-behavior: contain;
+  z-index: 5;
+}
+
+.naiwa .panel {
+  width: 100%;
+  max-width: 355px;
+  max-height: 100%;
+  overflow: auto;
+  padding: 25px 22px;
+  background: #fffdf3;
+  border: 1.5px solid #263f3d;
+  border-radius: 23px;
+  box-shadow: 0 7px 0 #263f3d12;
+  scrollbar-width: thin;
+}
+
+.naiwa .panel-kicker {
+  font-size: 11px;
+  letter-spacing: 2px;
+  margin: 0 0 10px;
+  color: #798775;
+}
+
+.naiwa .panel h1,
+.naiwa .panel h2 {
+  font-size: 26px;
+  line-height: 1.35;
+  letter-spacing: -1px;
+  margin: 0 0 9px;
+  font-weight: 850;
+}
+
+.naiwa .panel-intro {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #748275;
+  margin: 0 0 23px;
+}
+
+.naiwa .mode-options {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 20px;
+}
+
+.naiwa .mode-card {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 29px 1fr 17px;
+  gap: 10px;
+  align-items: center;
+  text-align: left;
+  background: transparent;
+  color: #263f3d;
+  border: 1.5px solid #d9dfcc;
+  border-radius: 13px;
+  padding: 14px 12px;
+  min-height: 86px;
+}
+
+.naiwa .mode-card.selected {
+  background: #f0f3de;
+  border-color: #4b6650;
+  box-shadow: inset 0 0 0 .5px #4b6650;
+}
+
+.naiwa .mode-card strong {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.naiwa .mode-card small {
+  display: block;
+  font-size: 11px;
+  line-height: 1.65;
+  color: #6b7b6d;
+}
+
+.naiwa .mode-symbol {
+  font-size: 30px;
+  color: #526e52;
+}
+
+.naiwa .mode-symbol.arrows {
+  font-size: 32px;
+}
+
+.naiwa .selection {
+  width: 17px;
+  height: 17px;
+  border: 1px solid #a7b69d;
+  border-radius: 50%;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+}
+
+.naiwa .selected .selection {
+  background: #526e52;
+  border-color: #526e52;
+  color: #fffdf1;
+}
+
+.naiwa .primary {
+  width: 100%;
+  padding: 16px 17px;
+  min-height: 52px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #263f3d;
+  border-radius: 12px;
+  background: #f6d75d;
+  color: #263f3d;
+  font-size: 15px;
+  font-weight: 750;
+  box-shadow: 0 4px 0 #d9bc4b;
+  gap: 8px;
+}
+
+.naiwa .primary>span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+.naiwa .best-line {
+  font-size: 11px;
+  color: #7a887b;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 19px 0 0;
+}
+
+.naiwa .best-line strong {
+  font-weight: 700;
+  color: #526951;
+}
+
+.naiwa .button-row {
+  display: flex;
+  gap: 9px;
+  margin-top: 15px;
+}
+
+.naiwa .secondary {
+  padding: 12px 8px;
+  min-height: 44px;
+  flex: 1;
+  border: 1px solid #d9dfcc;
+  background: transparent;
+  border-radius: 11px;
+  color: #526951;
+  font-size: 12px;
+}
+
+.naiwa .secondary.full {
+  width: 100%;
+  margin-top: 14px;
+}
+
+.naiwa .notice {
+  font-size: 12px;
+  line-height: 1.7;
+  padding: 10px 12px;
+  background: #edf1e0;
+  border-radius: 9px;
+  margin: 10px 0 16px;
+  overflow-wrap: anywhere;
+}
+
+.naiwa .notice.error {
+  background: #f8e8e1;
+  color: #78452e;
+}
+
+.naiwa .text-button {
+  background: none;
+  border: 0;
+  padding: 8px 0;
+  color: #526951;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-size: 12px;
+  min-height: 40px;
+  display: block;
+}
+
+.naiwa .notice.error .text-button {
+  color: #78452e;
+  font-weight: 700;
+}
+
+.naiwa .sound-settings {
+  display: flex;
+  gap: 25px;
+  margin: 12px 0 21px;
+}
+
+.naiwa .sound-settings label {
+  position: relative;
+  font-size: 12px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.naiwa .sound-settings input {
+  position: absolute;
+  right: 0;
+  width: 35px;
+  height: 24px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.naiwa .switch {
+  width: 34px;
+  height: 20px;
+  border-radius: 15px;
+  background: #d9dfcc;
+  padding: 3px;
+  pointer-events: none;
+}
+
+.naiwa .switch:before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #fffdf3;
+}
+
+.naiwa .sound-settings input:checked+.switch {
+  background: #526e52;
+}
+
+.naiwa .sound-settings input:checked+.switch:before {
+  transform: translateX(14px);
+}
+
+.naiwa .sound-settings input:focus-visible+.switch {
+  outline: 3px solid #d58348;
+  outline-offset: 3px;
+}
+
+.naiwa .setting-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.naiwa .tilt-settings input {
+  width: 100%;
+  accent-color: #526e52;
+  font-size: 16px;
+  height: 30px;
+}
+
+.naiwa .tilt-settings .text-button {
+  padding-top: 0;
+}
+
+.naiwa .result-label {
+  font-size: 12px;
+  margin: 25px 0 0;
+  color: #748275;
+}
+
+.naiwa .result-score {
+  font-family: ui-rounded,system-ui,sans-serif;
+  font-weight: 850;
+  font-size: 76px;
+  line-height: 1.3;
+  letter-spacing: -4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.naiwa .result-score span {
+  font-size: 22px;
+  letter-spacing: 0;
+  margin-left: 8px;
+  font-weight: 500;
+  color: #748275;
+}
+
+.naiwa .result-best {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #748275;
+  padding: 13px 0 22px;
+  margin: 0 0 12px;
+  border-bottom: 1px dashed #c9d1bc;
+}
+
+.naiwa .result-best strong {
+  color: #526951;
+}
+
+.naiwa .hint {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 12px;
+  line-height: 1.6;
+  background: #263f3dee;
+  color: #fffdf1;
+  padding: 11px 17px;
+  border-radius: 30px;
+  pointer-events: none;
+  z-index: 3;
+  max-width: calc(100% - 22px);
+}
+
+.naiwa .orientation-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  background: #f9f7e9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.naiwa .orientation-cover>span {
+  font-size: 55px;
+}
+
+.naiwa .orientation-cover h2 {
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.naiwa .orientation-cover p {
+  font-size: 13px;
+  color: #748275;
+  line-height: 1.8;
+}
+
+.naiwa .height {
+  background: #f7f8edef;
+  border-radius: 13px;
+  padding: 9px 12px;
+  margin: -9px -12px 0;
+  box-shadow: 0 1px 0 #263f3d09;
+}
+
+@media(hover:hover) and (pointer:fine) {
+  .naiwa .mode-card:hover,
+  .naiwa .secondary:hover {
+    background: #f0f3de;
+  }
+
+  .naiwa .primary:hover {
+    background: #ffe375;
+  }
+
+  .naiwa .pause-button:hover {
+    background: #f6d75d;
+  }
+
+}
+
+@media(min-width:600px) and (min-height:760px) {
+  .naiwa {
+    height: calc(100dvh - 48px);
+    max-height: 870px;
+  }
+
+  .naiwa .game-frame {
+    border-radius: 24px;
+    border: 1px solid #ffffff38;
+    box-shadow: 0 22px 70px #0e201f66;
+  }
+
+}
+
+@media(pointer:coarse) {
+  .naiwa .brand-bar {
+    height: calc(51px + env(safe-area-inset-top));
+    min-height: calc(51px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+  }
+
+  .naiwa {
+    max-height: none;
+  }
+
+  .naiwa .game-frame {
+    border-radius: 0;
+  }
+
+}
+
+@media(max-height:700px) {
+  .naiwa .brand-bar {
+    height: 45px;
+    min-height: 45px;
+  }
+
+  .naiwa .control-bar {
+    min-height: 76px;
+    padding-top: 9px;
+    padding-bottom: max(9px,env(safe-area-inset-bottom));
+  }
+
+  .naiwa .direction-button {
+    height: 51px;
+    width: 76px;
+  }
+
+  .naiwa .panel {
+    padding: 18px;
+  }
+
+  .naiwa .mode-options {
+    margin: 12px 0;
+    gap: 7px;
+  }
+
+  .naiwa .mode-card {
+    padding: 10px;
+    min-height: 71px;
+  }
+
+  .naiwa .panel-intro {
+    margin-bottom: 14px;
+  }
+
+  .naiwa .panel h1,
+  .naiwa .panel h2 {
+    font-size: 23px;
+  }
+
+  .naiwa .panel-kicker {
+    margin-bottom: 6px;
+  }
+
+  .naiwa .primary {
+    padding: 12px;
+    min-height: 47px;
+  }
+
+  .naiwa .sound-settings {
+    margin: 7px 0 12px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .naiwa *,
+  .naiwa *:before,
+  .naiwa *:after {
+    transition: none!important;
+    scroll-behavior: auto!important;
+  }
+
+}
+
+.naiwa .result-character { display: block; width: 66px; height: 88px; object-fit: contain; margin: -10px auto -8px; }
+
+/* Cover world: warm ivory framing and soft forest-green controls. */
+.naiwa { --world-accent: #acc09b; color: #194734; }
+.naiwa .game-frame { background: #f8f7ec; }
+.naiwa button:focus-visible,
+.naiwa input:focus-visible,
+.naiwa .sound-settings input:focus-visible + .switch { outline-color: #c59327; }
+.naiwa .brand-bar {
+  height: 48px;
+  min-height: 48px;
+  padding: 0 18px;
+  background: #faf9ef;
+  color: #194734;
+  border-bottom: 1px solid #31534010;
+}
+.naiwa .wordmark { font-size: 18px; letter-spacing: .5px; gap: 7px; }
+.naiwa .brand-star { font-size: 22px; color: #c9a741; }
+.naiwa .edition { color: #617367; font-size: 10px; letter-spacing: 1px; }
+.naiwa .hud { inset: 14px 16px auto; align-items: flex-start; }
+.naiwa .height {
+  position: relative;
+  margin: 0;
+  padding: 8px 11px 9px;
+  min-width: 108px;
+  background: #fcfbf0f5;
+  color: #194734;
+  border: 1px solid #fffef7b3;
+  border-radius: 13px;
+  box-shadow: 0 3px 12px #2544300c;
+}
+/* The number and unit already identify the height; retain its label for readers. */
+.naiwa .height > span:first-child {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+.naiwa .height strong { font-size: 30px; line-height: 1.1; letter-spacing: -1px; }
+.naiwa .height small { color: #194734; font-size: 15px; font-weight: 700; margin-left: 4px; }
+.naiwa .height .world-label { margin-top: 4px; color: #314c3d; font-size: 11px; line-height: 1.25; letter-spacing: .5px; font-weight: 700; }
+.naiwa .height .difficulty-label,
+.naiwa .height .difficulty-label[data-stage] { margin-top: 4px; color: #5f7165; font-size: 9px; line-height: 1.25; font-weight: 400; letter-spacing: .5px; }
+.naiwa .height .difficulty-label::before { content: '难度 · '; }
+.naiwa .world-stops { display: flex; align-items: center; gap: 4px; margin-top: 5px; }
+.naiwa .world-stops i { display: block; width: 8px; height: 3px; border-radius: 2px; background: #dbe1d2; }
+.naiwa .world-stops i.reached { background: #708d69; }
+.naiwa .world-stops i.current { width: 15px; background: #24523e; }
+.naiwa .pause-button {
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 0;
+  background: #214e3e;
+  color: #faf9eb;
+  border: 1.5px solid #fffef0;
+  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  line-height: 1;
+  font-size: 0;
+  box-shadow: 0 2px 9px #1b382b1a;
+}
+.naiwa .pause-button::before,
+.naiwa .pause-button::after { content: ''; position: absolute; top: 50%; transform: translateY(-50%); width: 5px; height: 18px; border-radius: 3px; background: currentColor; }
+.naiwa .pause-button::before { left: 13px; }
+.naiwa .pause-button::after { right: 13px; }
+.naiwa .control-bar {
+  min-height: 86px;
+  padding: 12px 18px max(12px, env(safe-area-inset-bottom));
+  gap: 8px;
+  color: #254638;
+  border-top: 1px solid #31534010;
+  background: #faf9ef;
+}
+.naiwa .control-caption { min-width: 0; line-height: 1.7; }
+.naiwa .control-caption strong { font-size: 12px; letter-spacing: .5px; }
+.naiwa .control-caption span { color: #657468; font-size: 9px; }
+.naiwa .direction-button {
+  width: 86px;
+  height: 56px;
+  border: 1px solid #174332;
+  border-radius: 999px;
+  background: #214e3e;
+  color: #faf9eb;
+  font-size: 34px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px #2444340d;
+}
+.naiwa .direction-button.held { background: #3a7056; transform: translateY(2px); box-shadow: inset 0 1px 3px #17362824; }
+.naiwa .direction-button:disabled { opacity: .35; }
+.naiwa .overlay { background: #ecf0e3bd; }
+.naiwa .panel { background: #fcfbf1; border: 1px solid #b8c6b7; border-radius: 23px; box-shadow: 0 14px 36px #263f3d1a; }
+.naiwa .panel-kicker,
+.naiwa .panel-intro,
+.naiwa .build-version { color: #667766; }
+.naiwa .primary { background: #214e3e; border-color: #214e3e; border-radius: 999px; color: #faf9eb; box-shadow: 0 2px 5px #24443412; }
+.naiwa .mode-card.selected { background: #eef2e2; border-color: #52765c; box-shadow: inset 0 0 0 .5px #52765c; }
+.naiwa .hint { background: #214e3ef2; border: 1px solid #f6f5e93d; border-radius: 999px; color: #faf9eb; box-shadow: 0 3px 12px #1839271a; }
+.naiwa .orientation-cover { background: #faf9ef; }
+@media (hover: hover) and (pointer: fine) {
+  .naiwa .primary:hover,
+  .naiwa .pause-button:hover,
+  .naiwa .direction-button:hover { background: #32634b; }
+  .naiwa .direction-button.held:hover { background: #3a7056; }
+}
+@media (min-width: 600px) and (min-height: 760px) {
+  .naiwa .game-frame { border-color: #dce2d5; box-shadow: 0 18px 55px #30513b1c; }
+}
+@media (pointer: coarse) {
+  .naiwa .brand-bar {
+    height: calc(48px + env(safe-area-inset-top));
+    min-height: calc(48px + env(safe-area-inset-top));
+    padding-top: env(safe-area-inset-top);
+  }
+}
+@media (max-width: 360px) {
+  .naiwa .brand-bar { padding-right: 14px; padding-left: 14px; }
+  .naiwa .control-bar { padding-right: 14px; padding-left: 14px; gap: 7px; }
+  .naiwa .direction-button { width: 72px; }
+  .naiwa .control-caption strong { font-size: 11px; }
+}
+@media (max-height: 700px) {
+  .naiwa .brand-bar { height: calc(42px + env(safe-area-inset-top)); min-height: calc(42px + env(safe-area-inset-top)); }
+  .naiwa .control-bar { min-height: 74px; padding-top: 9px; padding-bottom: max(9px, env(safe-area-inset-bottom)); }
+  .naiwa .direction-button { height: 52px; }
+  .naiwa .hud { inset: 10px 13px auto; }
+  .naiwa .height { min-width: 101px; padding: 7px 10px; }
+  .naiwa .height strong { font-size: 26px; }
+  .naiwa .height .difficulty-label { display: block; }
+  .naiwa .world-stops { margin-top: 4px; }
+}
+
+/* A quiet pause after the fall: the result rises into the same paper-and-green world. */
+.naiwa { --ease-out: cubic-bezier(.23, 1, .32, 1); }
+.naiwa[data-view="dying"] .control-bar { visibility: hidden; }
+.naiwa[data-view="over"] .overlay {
+  padding: 22px;
+  background: #eff2e6e6;
+  animation: result-fade 200ms ease both;
+}
+.naiwa .result-panel {
+  max-width: 354px;
+  padding: 24px;
+  border: 1px solid #b2c1a7;
+  border-radius: 26px;
+  background: #fcfbef;
+  box-shadow: 0 8px 0 #32513e0a, 0 18px 44px #1e453320;
+  animation: result-enter 240ms var(--ease-out) both;
+}
+.naiwa .result-hero {
+  display: grid;
+  grid-template-columns: 1fr 126px;
+  align-items: center;
+  min-height: 130px;
+  margin-bottom: 13px;
+}
+.naiwa .result-heading { position: relative; z-index: 1; }
+.naiwa .result-panel .panel-kicker {
+  margin: 0 0 10px;
+  color: #688064;
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+}
+.naiwa .result-panel h2 {
+  margin: 0;
+  font-size: 33px;
+  line-height: 1.15;
+  letter-spacing: -.8px;
+  color: #254f3c;
+}
+.naiwa .result-heading h2 > span { display: block; }
+.naiwa .result-portrait {
+  position: relative;
+  height: 130px;
+  isolation: auto;
+}
+.naiwa .result-portrait::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 15px -3px 5px 4px;
+  border-radius: 47% 53% 42% 58%;
+  background: #e6ecc2;
+  transform: rotate(-9deg);
+}
+.naiwa .result-panel .result-character {
+  position: absolute;
+  inset: auto 0 0 auto;
+  width: 126px;
+  height: 140px;
+  margin: 0;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+.naiwa .result-panel .result-sad { width: 116px; height: 132px; right: 4px; bottom: 2px; object-fit: cover; }
+.naiwa .result-panel[data-result="regular"] .result-portrait::before { content: none; }
+.naiwa .result-panel[data-result="record"] .result-portrait::before { background: #f1e8b5; }
+.naiwa .result-panel .result-laugh,
+.naiwa .result-panel .result-poster {
+  width: 154px;
+  height: 154px;
+  right: -12px;
+  bottom: 0;
+  mix-blend-mode: normal;
+  pointer-events: none;
+}
+.naiwa .result-spark {
+  position: absolute;
+  top: 4px;
+  right: 0;
+  color: #b4932f;
+  font-size: 26px;
+  line-height: 1;
+  transform: rotate(12deg);
+}
+.naiwa .result-stats {
+  padding-top: 13px;
+  border-top: 1px dashed #c7ceb6;
+  animation: result-enter 200ms var(--ease-out) 40ms both;
+}
+.naiwa .result-score-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-height: 23px;
+}
+.naiwa .result-panel .result-label {
+  margin: 0;
+  font-size: 12px;
+  color: #60745f;
+}
+.naiwa .result-record {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #f3d46b;
+  color: #455328;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+.naiwa .result-panel .result-score {
+  display: flex;
+  align-items: baseline;
+  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
+  font-size: clamp(56px, 18vw, 78px);
+  font-weight: 800;
+  line-height: 1.12;
+  letter-spacing: -3.8px;
+  color: #254f3c;
+}
+.naiwa .result-panel .result-score > span {
+  margin-left: 7px;
+  color: #61775f;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.naiwa .result-panel .result-best {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 42px;
+  margin: 5px 0 0;
+  padding: 7px 0;
+  border: 0;
+  font-size: 12px;
+  color: #60745f;
+}
+.naiwa .result-panel .result-best strong {
+  color: #254f3c;
+  font-size: 17px;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+.naiwa .result-leaderboard {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 9px;
+  min-height: 54px;
+  margin-top: 10px;
+  padding: 10px 13px;
+  background: #edf0dd;
+  color: #36573e;
+  border: 1px solid #dbe2c9;
+  border-radius: 13px;
+  text-align: left;
+  animation: result-enter 200ms var(--ease-out) 80ms both;
+}
+.naiwa .result-leaderboard[aria-disabled="true"] { cursor: default; }
+.naiwa .result-leaderboard[aria-disabled="true"]:active { transform: none; }
+.naiwa .result-leaderboard-icon { display: flex; align-items: center; flex-shrink: 0; }
+.naiwa .result-leaderboard-icon svg { display: block; width: 23px; height: 23px; }
+.naiwa .result-leaderboard-label { flex: 1; font-size: 12px; font-weight: 700; white-space: nowrap; }
+.naiwa .result-leaderboard-state { color: #738064; font-size: 10px; white-space: nowrap; }
+.naiwa .result-actions {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 10px;
+  margin-top: 19px;
+  animation: result-enter 200ms var(--ease-out) 80ms both;
+}
+.naiwa .result-actions button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9px;
+  min-height: 51px;
+  padding: 11px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 140ms var(--ease-out), background-color 160ms ease;
+}
+.naiwa .result-actions .primary { background: #254f3c; color: #fff2bd; border-color: #254f3c; box-shadow: none; }
+.naiwa .result-actions .secondary { color: #36573e; border-color: #afbea5; background: transparent; }
+.naiwa .result-actions button > span { font-size: inherit; line-height: 1.4; }
+.naiwa .result-actions button > svg { width: 18px; height: 18px; flex-shrink: 0; }
+.naiwa .result-actions button:active:not(:disabled) { transform: scale(.97); }
+.naiwa .result-panel .notice { margin: 12px 0 0; font-size: 11px; }
+@keyframes result-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes result-fade { from { opacity: 0; } to { opacity: 1; } }
+@media (hover: hover) and (pointer: fine) {
+  .naiwa .result-actions .primary:hover { background: #386449; }
+  .naiwa .result-actions .secondary:hover { background: #eff1df; }
+  .naiwa .result-leaderboard[aria-disabled="false"]:hover { background: #e4e9cc; }
+}
+@media (max-width: 360px), (max-height: 650px) {
+  .naiwa[data-view="over"] .overlay { padding: 14px; }
+  .naiwa .result-panel { padding: 19px; border-radius: 22px; }
+  .naiwa .result-hero { grid-template-columns: 1fr 105px; min-height: 104px; margin-bottom: 9px; }
+  .naiwa .result-panel .panel-kicker { margin-bottom: 8px; font-size: 9px; letter-spacing: 2px; }
+  .naiwa .result-panel h2 { font-size: 28px; }
+  .naiwa .result-portrait { height: 104px; }
+  .naiwa .result-panel .result-character { width: 105px; height: 120px; right: 0; bottom: 0; }
+  .naiwa .result-panel .result-sad { width: 100px; height: 112px; right: 0; bottom: 0; }
+  .naiwa .result-panel .result-laugh,
+  .naiwa .result-panel .result-poster { width: 128px; height: 128px; right: -10px; bottom: 0; }
+  .naiwa .result-spark { font-size: 22px; }
+  .naiwa .result-stats { padding-top: 10px; }
+  .naiwa .result-panel .result-score { font-size: 65px; }
+  .naiwa .result-panel .result-best { min-height: 36px; margin-top: 2px; }
+  .naiwa .result-leaderboard { min-height: 50px; margin-top: 9px; padding: 9px 10px; gap: 7px; }
+  .naiwa .result-actions { margin-top: 15px; gap: 8px; }
+  .naiwa .result-actions button { min-height: 48px; gap: 6px; padding: 10px 8px; font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .naiwa[data-view="over"] .overlay,
+  .naiwa .result-panel,
+  .naiwa .result-stats,
+  .naiwa .result-leaderboard,
+  .naiwa .result-actions { animation: result-fade 160ms ease both; }
+  .naiwa .result-actions button:active:not(:disabled) { transform: none; }
+}

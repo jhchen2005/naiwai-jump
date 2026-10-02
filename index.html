@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6e8">
+  <meta name="description" content="奶娃Jump，向上，再向上。和奶娃一起开始今天的第一跳。">
+  <title>奶娃Jump</title>
+  <link rel="icon" type="image/svg+xml" href="./assets/home/favicon.svg">
+  <link rel="stylesheet" href="./src/styles.css">
+  <link rel="stylesheet" href="./src/home.css">
+</head>
+<body class="home-page">
+  <main id="home" class="jump-home" aria-label="奶娃Jump 游戏首页">
+    <div class="home-topbar">
+      <span id="home-record">向上，再向上。</span>
+      <button id="replay" class="home-text-button" type="button" aria-label="重播首页动画">重播 <span aria-hidden="true">↻</span></button>
+    </div>
+    <section class="poster" aria-label="奶娃Jump 动态海报">
+      <h1 class="sr-only">奶娃Jump</h1>
+      <svg id="poster-art" viewBox="0 0 720 900" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="poster-title poster-description">
+        <title id="poster-title">奶娃Jump</title>
+        <desc id="poster-description">绿色大字下，同一个黄色奶娃从左至右做出侧身抱肚、正面抱臂、马步抬掌三个动作，人物造型依据四视图，搭配浅黄绿色背景。</desc>
+        <defs>
+          <linearGradient id="paper" x1="0" y1="0" x2="0.35" y2="1">
+            <stop offset="0" stop-color="#f8f7e9"/><stop offset="1" stop-color="#f0f4df"/>
+          </linearGradient>
+          <clipPath id="jump-entry-window"><path d="M0 0h720v551H0z"/></clipPath>
+        </defs>
+        <path fill="url(#paper)" d="M0 0h720v900H0z"/>
+        <g class="title-art" fill="#326447" aria-hidden="true">
+          <g class="title-letter" data-letter="奶"><text x="125" y="305" class="title-cn">奶</text></g>
+          <g class="title-letter" data-letter="娃"><text x="350" y="305" class="title-cn">娃</text></g>
+          <g clip-path="url(#jump-entry-window)">
+            <g class="title-letter" data-letter="J"><text x="55" y="499" class="title-en">J</text></g>
+            <g class="title-letter" data-letter="u"><text x="176" y="499" class="title-en">u</text></g>
+            <g class="title-letter" data-letter="m"><text x="332" y="499" class="title-en">m</text></g>
+            <g class="title-letter" data-letter="p"><text x="533" y="499" class="title-en">p</text></g>
+          </g>
+        </g>
+        <g class="sticker-wrap sticker-one" aria-hidden="true">
+          <g transform="translate(112 123) rotate(-13)">
+            <ellipse rx="82" ry="28" fill="#f3c63f" stroke="#254f3c" stroke-width="2"/>
+            <text text-anchor="middle" dominant-baseline="central" fill="#254f3c" class="sticker-text">LET’S JUMP!</text>
+          </g>
+        </g>
+        <g class="sticker-wrap sticker-two" aria-hidden="true">
+          <g transform="translate(588 357) rotate(11)">
+            <ellipse rx="83" ry="27" fill="#f3c63f" stroke="#254f3c" stroke-width="2"/>
+            <text text-anchor="middle" dominant-baseline="central" fill="#254f3c" class="sticker-text sticker-chinese">一起向上</text>
+          </g>
+        </g>
+        <g class="direction-mark" fill="none" stroke="#f3c63f" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M99 239C47 283 48 351 94 361C139 371 153 319 121 316C78 311 67 388 111 411C136 425 155 417 167 408M145 405l23 2-10 23"/>
+        </g>
+        <g id="mascots" aria-hidden="true">
+          <g id="mascot-motion">
+            <g transform="translate(84 467) scale(.945945946)"><g class="mascot-slot slot-left" data-character="left" data-visible-width="194.690266"></g></g>
+            <g transform="translate(352 467) scale(.932432432)"><g class="mascot-slot slot-right" data-character="right" data-visible-width="287.047244"></g></g>
+            <g transform="translate(227 491)"><g class="mascot-slot slot-center" data-character="center" data-visible-width="187.121019"></g></g>
+          </g>
+        </g>
+      </svg>
+      <p id="art-error" class="home-error" hidden>角色插画加载失败，请刷新页面重试。</p>
+    </section>
+    <div class="home-actions">
+      <button id="start-jump" class="home-start" type="button"><span>开始跳跃</span><span aria-hidden="true">↗</span></button>
+      <fieldset class="home-modes" aria-label="选择操控方式">
+        <legend class="sr-only">选择操控方式</legend>
+        <label><input type="radio" name="home-mode" value="buttons" checked><span>按键操控</span></label>
+        <!-- Tilt entry is retained for later development; restore hidden/disabled together. -->
+        <label hidden><input type="radio" name="home-mode" value="tilt" disabled><span>倾斜操控</span></label>
+      </fieldset>
+      <div class="home-bottom">
+        <button id="sound-toggle" class="home-text-button" type="button" aria-pressed="true">声音开</button>
+        <button id="how-to" class="home-text-button" type="button" aria-expanded="false" aria-controls="home-help">怎么玩？</button>
+      </div>
+      <p id="home-help" class="home-help" hidden>奶娃会自动跳跃。电脑用 A / D 或左右方向键；手机按住左右按钮。</p>
+      <p id="home-status" class="home-status" role="status" aria-live="polite"></p>
+    </div>
+  </main>
+  <section id="game-shell" class="home-game-shell" aria-label="奶娃跳跃游戏" hidden>
+    <div id="game-host" hidden></div>
+    <button id="game-back" class="home-game-back" type="button">返回首页</button>
+  </section>
+  <noscript><p class="home-noscript">请启用 JavaScript 以播放动画和开始游戏。</p></noscript>
+  <script type="module" src="./src/home.js"></script>
+</body>
+</html>
