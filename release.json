@@ -1,7 +1,7 @@
 {
-  "id": "30595de6801b469e",
-  "base": "releases/30595de6801b469e",
-  "builtAt": "2026-10-02T09:00:45.536Z",
+  "id": "035d8b308ddd5536",
+  "base": "releases/035d8b308ddd5536",
+  "builtAt": "2026-10-02T09:05:25.936Z",
   "settingsRevision": 1,
   "settingsSavedAt": "2026-10-02T07:24:14.972Z",
   "settingsSha256": "f38f95d9aa79a9740eaee205e2bbba092f938cce5aca21a38e5ad42fab8fd5aa",
@@ -33,424 +33,424 @@
   ],
   "audio": [
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-01.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-01.wav",
       "sha256": "34f7fa525098a031165fee9efb1d85f645ee2e38cb098ab490e4a03b16891aa1",
       "bytes": 64556
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-02.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-02.wav",
       "sha256": "5d53571c1c209ecac82a8ab2582cc90f7d2402404060240cdd946c42e16aa413",
       "bytes": 58796
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-03.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-03.wav",
       "sha256": "38f201e7fde742316333d07e0207be553cb1d680002718f1c7b35a6e48f0fbf1",
       "bytes": 53900
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-04.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-04.wav",
       "sha256": "2628f9c0bf30fbee2dc74f390e689573e9d72aed786d57fb1ceba113f211d378",
       "bytes": 50156
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-05.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-05.wav",
       "sha256": "553a2ecc9a96f12bbd6dfab420fcb787f2a5e5edecfd085fd1da77bb68382721",
       "bytes": 46412
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-06.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-06.wav",
       "sha256": "67329cbbd36fbc4d5bfd28d9e39976e0a31b5fc9a580bd044b4c25558063d74b",
       "bytes": 23084
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/props/spring-duang.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/props/spring-duang.wav",
       "sha256": "42e1f107481e794c2d4b99719f686d9235c3441c76ea656e1098461210a56217",
       "bytes": 84524
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/props/broom-whoosh.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/props/broom-whoosh.wav",
       "sha256": "5996111ee9464b41282675ce42f7128a6cb1e3cdbbd636daa7d9a3228d108e2d",
       "bytes": 103724
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/props/jetpack-launch.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/props/jetpack-launch.wav",
       "sha256": "4c1106d9d146939b669d9b8e1ec741480aff9b8314ecbc7b9044eecaf7e8ff62",
       "bytes": 105644
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/results/record-laugh-standing.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/results/record-laugh-standing.wav",
       "sha256": "a56f70553ee76477c2a822f72b9c2315c0a6d1372cc114b4c62a800250999ccc",
       "bytes": 1023164
     }
   ],
   "files": [
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-01.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-01.wav",
       "sha256": "34f7fa525098a031165fee9efb1d85f645ee2e38cb098ab490e4a03b16891aa1",
       "bytes": 64556
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-02.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-02.wav",
       "sha256": "5d53571c1c209ecac82a8ab2582cc90f7d2402404060240cdd946c42e16aa413",
       "bytes": 58796
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-03.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-03.wav",
       "sha256": "38f201e7fde742316333d07e0207be553cb1d680002718f1c7b35a6e48f0fbf1",
       "bytes": 53900
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-04.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-04.wav",
       "sha256": "2628f9c0bf30fbee2dc74f390e689573e9d72aed786d57fb1ceba113f211d378",
       "bytes": 50156
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-05.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-05.wav",
       "sha256": "553a2ecc9a96f12bbd6dfab420fcb787f2a5e5edecfd085fd1da77bb68382721",
       "bytes": 46412
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/bing-06.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/bing-06.wav",
       "sha256": "67329cbbd36fbc4d5bfd28d9e39976e0a31b5fc9a580bd044b4c25558063d74b",
       "bytes": 23084
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/props/broom-whoosh.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/props/broom-whoosh.wav",
       "sha256": "5996111ee9464b41282675ce42f7128a6cb1e3cdbbd636daa7d9a3228d108e2d",
       "bytes": 103724
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/props/jetpack-launch.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/props/jetpack-launch.wav",
       "sha256": "4c1106d9d146939b669d9b8e1ec741480aff9b8314ecbc7b9044eecaf7e8ff62",
       "bytes": 105644
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/props/spring-duang.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/props/spring-duang.wav",
       "sha256": "42e1f107481e794c2d4b99719f686d9235c3441c76ea656e1098461210a56217",
       "bytes": 84524
     },
     {
-      "file": "releases/30595de6801b469e/assets/audio/results/record-laugh-standing.wav",
+      "file": "releases/035d8b308ddd5536/assets/audio/results/record-laugh-standing.wav",
       "sha256": "a56f70553ee76477c2a822f72b9c2315c0a6d1372cc114b4c62a800250999ccc",
       "bytes": 1023164
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/confirmed-v1/atlas.json",
+      "file": "releases/035d8b308ddd5536/assets/character/confirmed-v1/atlas.json",
       "sha256": "eba4ef7dc226c95aba0c92ffc882237d15d1e409d99463d3f9ad935aa907ce28",
       "bytes": 11034
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/confirmed-v1/atlas.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/confirmed-v1/atlas.webp",
       "sha256": "08827a96c7c821aff753d617af97cfca40756f137c8d253172995e28d27c9cc7",
       "bytes": 293004
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/confirmed-v1/fail.png",
+      "file": "releases/035d8b308ddd5536/assets/character/confirmed-v1/fail.png",
       "sha256": "73f05f7c254682fb00356669b5390cd11cde27eeb9c3fc093796c7d20d0968f3",
       "bytes": 26463
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/animation.json",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/animation.json",
       "sha256": "a6507668756fd4060b8a5798e6d760599beaa6dcfa8a3e4d6e51ad3ae1f16634",
       "bytes": 558
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-0.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-0.webp",
       "sha256": "9f12f308f81d8d42874a3d40adf66a3e85c0f434fd139523b2a6015c0f59f832",
       "bytes": 332982
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-1.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-1.webp",
       "sha256": "3484689e88cc643d2d68bb899115b00eb665bab84c9ade85d72f2a6e3eb08bbc",
       "bytes": 328816
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-2.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-2.webp",
       "sha256": "4a3e7316ddbf8962baca3a90f66ee3d68c28d8d460a6b1fcb822e984c2b79dbd",
       "bytes": 339472
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-3.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-3.webp",
       "sha256": "063acaad6511fc2fa8cadbda8c8a21c702f44240101d389218a3c4069f0f5167",
       "bytes": 338060
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-4.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-4.webp",
       "sha256": "e9603f7d15b6de95c8733e2369860f79844992c470b16802cf87b74260538128",
       "bytes": 329040
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-5.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-5.webp",
       "sha256": "452cce380377cd6bc0c14afce87dabe5b69628316ba47151738df840571dbdff",
       "bytes": 318794
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-6.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-6.webp",
       "sha256": "8693eb93602a959611a925b39c9959fd890d5a90e2854a29dd6b0cf158ae3e3a",
       "bytes": 328174
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/laugh-7.webp",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/laugh-7.webp",
       "sha256": "13eae3af3daa40cab412c913cd0a6d672b72a74a4c307ab699d2c1dcaec4808b",
       "bytes": 99958
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-standing-v3/poster.png",
+      "file": "releases/035d8b308ddd5536/assets/character/results-standing-v3/poster.png",
       "sha256": "3531a9eb57e7cf7981c94a17660bf7eb493567584c39fa74514e1131c6a84341",
       "bytes": 36020
     },
     {
-      "file": "releases/30595de6801b469e/assets/character/results-v1/sad-original.png",
+      "file": "releases/035d8b308ddd5536/assets/character/results-v1/sad-original.png",
       "sha256": "a2934db6d8c5bbade707aff9faf9d522acd82571f757959dc9e486d9a7f7c309",
       "bytes": 247473
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/favicon.svg",
+      "file": "releases/035d8b308ddd5536/assets/home/favicon.svg",
       "sha256": "58624b3143988e358663df9ecef8da54393ed3523cdf100b5ab33dff696dfc67",
       "bytes": 436
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/mascot-center.svg",
+      "file": "releases/035d8b308ddd5536/assets/home/mascot-center.svg",
       "sha256": "953a42f41c67d0215ab38f0448f1777b47908aee9e149a7980c3a5ee3fdb4cc7",
       "bytes": 2801
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/mascot-center.webp",
+      "file": "releases/035d8b308ddd5536/assets/home/mascot-center.webp",
       "sha256": "945f2065ed0e85b6883f58c94e7b41d4b5648542e93a3097c6055fd8613a5a31",
       "bytes": 53634
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/mascot-left.svg",
+      "file": "releases/035d8b308ddd5536/assets/home/mascot-left.svg",
       "sha256": "70fb88f853b5a9c40a516f8044a766636c0361d483ed755d3562ccea75e71be7",
       "bytes": 4138
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/mascot-left.webp",
+      "file": "releases/035d8b308ddd5536/assets/home/mascot-left.webp",
       "sha256": "960395e6dc2dae0d060c5427f2cd91f6b2578ef6a18e7d351fac7bd2cb64c3c0",
       "bytes": 55508
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/mascot-right.svg",
+      "file": "releases/035d8b308ddd5536/assets/home/mascot-right.svg",
       "sha256": "750d29a331cb480ed743bec115c442715a97254e62440efdaeea5b8c571e3c85",
       "bytes": 3056
     },
     {
-      "file": "releases/30595de6801b469e/assets/home/mascot-right.webp",
+      "file": "releases/035d8b308ddd5536/assets/home/mascot-right.webp",
       "sha256": "278880a7f2fce131855791f9afe6a0590092322b3052e9661de771b83b830121",
       "bytes": 66390
     },
     {
-      "file": "releases/30595de6801b469e/assets/props/enlarged-v2/actions.json",
+      "file": "releases/035d8b308ddd5536/assets/props/enlarged-v2/actions.json",
       "sha256": "0773f080e4203b94f317177fad1ab7d04c822741d0807d621ad36e69a99a8a32",
       "bytes": 12995
     },
     {
-      "file": "releases/30595de6801b469e/assets/props/enlarged-v2/actions.webp",
+      "file": "releases/035d8b308ddd5536/assets/props/enlarged-v2/actions.webp",
       "sha256": "79100ce92030be7cc24dc54b7190b7a67503c04b47b82a5f08b5b3d4a2c36b8b",
       "bytes": 529806
     },
     {
-      "file": "releases/30595de6801b469e/assets/props/enlarged-v2/broom.png",
+      "file": "releases/035d8b308ddd5536/assets/props/enlarged-v2/broom.png",
       "sha256": "688120b980789df29a33b8b269bb5742dfb149b9949936741554c6bc1b90b687",
       "bytes": 24280
     },
     {
-      "file": "releases/30595de6801b469e/assets/props/enlarged-v2/icons.json",
+      "file": "releases/035d8b308ddd5536/assets/props/enlarged-v2/icons.json",
       "sha256": "cf6510ac0aec6d2a1c08b0f29e6030a9ac995499712249326b4758e55d32f0d1",
       "bytes": 409
     },
     {
-      "file": "releases/30595de6801b469e/assets/props/enlarged-v2/jetpack.png",
+      "file": "releases/035d8b308ddd5536/assets/props/enlarged-v2/jetpack.png",
       "sha256": "1b1d63e9fdbf3b4dd2cd5a4bd4ea09624dfd6cc1f3228480002ea8a2ffd95ec5",
       "bytes": 70058
     },
     {
-      "file": "releases/30595de6801b469e/assets/props/enlarged-v2/pogo.png",
+      "file": "releases/035d8b308ddd5536/assets/props/enlarged-v2/pogo.png",
       "sha256": "c6727b4452204c302bad59c6229047bb27c2f1081b90093fcedcbb1c6abe377f",
       "bytes": 32892
     },
     {
-      "file": "releases/30595de6801b469e/assets/support/author-qr.png",
+      "file": "releases/035d8b308ddd5536/assets/support/author-qr.png",
       "sha256": "e21a7a209c20684637ba065f32c6460574f253edd4113e345862596b3412b7eb",
       "bytes": 158541
     },
     {
-      "file": "releases/30595de6801b469e/assets/world/cave.webp",
+      "file": "releases/035d8b308ddd5536/assets/world/cave.webp",
       "sha256": "9bc752032a0cb23e91988568e4bba95806f824174700637a107d4bee37f00795",
       "bytes": 135952
     },
     {
-      "file": "releases/30595de6801b469e/assets/world/forest.webp",
+      "file": "releases/035d8b308ddd5536/assets/world/forest.webp",
       "sha256": "2b0fb853e5efdb5aa19b9994493d9ea654b6cc6e6422c78223351984b8ad780b",
       "bytes": 208916
     },
     {
-      "file": "releases/30595de6801b469e/assets/world/mountain.webp",
+      "file": "releases/035d8b308ddd5536/assets/world/mountain.webp",
       "sha256": "a8bb01a0a9fa8b0d0e13ab572a09cd639706020d17de729ece6db665c2b920e5",
       "bytes": 246360
     },
     {
-      "file": "releases/30595de6801b469e/assets/world/sky.webp",
+      "file": "releases/035d8b308ddd5536/assets/world/sky.webp",
       "sha256": "74336aa51e518ebf056c328a54a44c79b1fcda7760bf3f041c88420be2b1566e",
       "bytes": 73084
     },
     {
-      "file": "releases/30595de6801b469e/assets/world/snow.webp",
+      "file": "releases/035d8b308ddd5536/assets/world/snow.webp",
       "sha256": "d41a7209b656b41e9e8bbda0d6721dff17dada47f4608ba4633432f6fa7ad71a",
       "bytes": 193662
     },
     {
-      "file": "releases/30595de6801b469e/assets/world/space.webp",
+      "file": "releases/035d8b308ddd5536/assets/world/space.webp",
       "sha256": "976b05a3c3aa5e3a8323802eb5ec9c7797da98a5bd063ade96eb792ecf919437",
       "bytes": 248648
     },
     {
-      "file": "releases/30595de6801b469e/src/api.js",
+      "file": "releases/035d8b308ddd5536/src/api.js",
       "sha256": "2bbf20d6800a48e6717f15ff22457c07892269eef5082971daca64bb8258f315",
       "bytes": 10105
     },
     {
-      "file": "releases/30595de6801b469e/src/art.js",
+      "file": "releases/035d8b308ddd5536/src/art.js",
       "sha256": "44bf93549b566831661e21cd8464dd658c17472f9dfbfe1498c1481da108efbf",
       "bytes": 11281
     },
     {
-      "file": "releases/30595de6801b469e/src/audio.js",
+      "file": "releases/035d8b308ddd5536/src/audio.js",
       "sha256": "b10558eefabb52a76c59a57bed025d5a97ddde65c784eac11e7798242bcffa27",
       "bytes": 9002
     },
     {
-      "file": "releases/30595de6801b469e/src/character-motion.js",
+      "file": "releases/035d8b308ddd5536/src/character-motion.js",
       "sha256": "8925aafce51a17e06c596364fa70d341863aad9aa5e931c0215541fa69005e0a",
       "bytes": 2951
     },
     {
-      "file": "releases/30595de6801b469e/src/character.js",
+      "file": "releases/035d8b308ddd5536/src/character.js",
       "sha256": "d2b8bd6d699279fbcef3a02496bc3038821ab7a9ace164a6c71a227998068f4e",
       "bytes": 8043
     },
     {
-      "file": "releases/30595de6801b469e/src/config-defaults.js",
+      "file": "releases/035d8b308ddd5536/src/config-defaults.js",
       "sha256": "a1ef2d63f7945d868be745c2733ddc05e383cedf657557c446bb58bb315440e0",
       "bytes": 2450
     },
     {
-      "file": "releases/30595de6801b469e/src/config.js",
+      "file": "releases/035d8b308ddd5536/src/config.js",
       "sha256": "e5f1dcdc79c335be5ce8edc5de2bab78c3fb7556bf7c4e9ea7acfc5dbb099b74",
       "bytes": 774
     },
     {
-      "file": "releases/30595de6801b469e/src/controls.js",
+      "file": "releases/035d8b308ddd5536/src/controls.js",
       "sha256": "3898803f6a573bd717eb6ed7b9cf1184ce91dc28ec3d2b31d74cd0d50655a88d",
       "bytes": 6299
     },
     {
-      "file": "releases/30595de6801b469e/src/difficulty.js",
+      "file": "releases/035d8b308ddd5536/src/difficulty.js",
       "sha256": "4d0088c0a193262351a56b120b99bb7fb7a9f4569077492b94b6882a7b7f509e",
       "bytes": 984
     },
     {
-      "file": "releases/30595de6801b469e/src/entry-redirect.js",
+      "file": "releases/035d8b308ddd5536/src/entry-redirect.js",
       "sha256": "958836cd38923859389f676af479ece2f662148ffdcd0423d6169fa90297b885",
       "bytes": 297
     },
     {
-      "file": "releases/30595de6801b469e/src/game.js",
+      "file": "releases/035d8b308ddd5536/src/game.js",
       "sha256": "8ac070836a123f3c1b70eacfb9ec1291ba2611dc091c8e62ca53faca1ed89b8e",
       "bytes": 6823
     },
     {
-      "file": "releases/30595de6801b469e/src/generator.js",
+      "file": "releases/035d8b308ddd5536/src/generator.js",
       "sha256": "42dc6fb981e2e44985d622124eeba1a43462a359cb701653adef9fc71e487bd9",
       "bytes": 7049
     },
     {
-      "file": "releases/30595de6801b469e/src/home.css",
+      "file": "releases/035d8b308ddd5536/src/home.css",
       "sha256": "0a3fb2d86038db101bfa80249957ba6f012d6db7b22bacc769bdfe52aec31a9c",
       "bytes": 6556
     },
     {
-      "file": "releases/30595de6801b469e/src/home.js",
+      "file": "releases/035d8b308ddd5536/src/home.js",
       "sha256": "e1c9865de3f8eed2ec4b8fbd87acca70ebe1d99284f91b0dd03a535f65bf9166",
       "bytes": 13791
     },
     {
-      "file": "releases/30595de6801b469e/src/items.js",
+      "file": "releases/035d8b308ddd5536/src/items.js",
       "sha256": "7d06fbc03098aa6e67678221d2655d0095f6414e2bbdb6321457fce8b26c160b",
       "bytes": 2110
     },
     {
-      "file": "releases/30595de6801b469e/src/main.js",
+      "file": "releases/035d8b308ddd5536/src/main.js",
       "sha256": "dd1b2721e81467f5ce4a0e3b3402a4aa9925a21f5cc3373fbfb12ace33768139",
       "bytes": 192
     },
     {
-      "file": "releases/30595de6801b469e/src/physics.js",
+      "file": "releases/035d8b308ddd5536/src/physics.js",
       "sha256": "8072d0950f631e958eb948cd1d649c6f0c4686bb5ed6fc0aab019170eb803c4b",
       "bytes": 1653
     },
     {
-      "file": "releases/30595de6801b469e/src/play.css",
+      "file": "releases/035d8b308ddd5536/src/play.css",
       "sha256": "93acf7cde5e70b604669298f09d1204de4de1f1f77a3e39d73ffad380d762027",
       "bytes": 318
     },
     {
-      "file": "releases/30595de6801b469e/src/prop-art.js",
+      "file": "releases/035d8b308ddd5536/src/prop-art.js",
       "sha256": "3ccfdf61c65814a1a19e35c82728618142362f4dea3efdb0275b8d83ad64e910",
       "bytes": 3381
     },
     {
-      "file": "releases/30595de6801b469e/src/reachability.js",
+      "file": "releases/035d8b308ddd5536/src/reachability.js",
       "sha256": "fd05f167d7eb3590b72a978b9ef1b2fad89bead7805940e6a6d5a80e8aa3702c",
       "bytes": 1638
     },
     {
-      "file": "releases/30595de6801b469e/src/renderer.js",
+      "file": "releases/035d8b308ddd5536/src/renderer.js",
       "sha256": "f4c64da237e5886a6714f17265c2b825a0e1fcc227aef2c8fadef4fff604628b",
       "bytes": 3074
     },
     {
-      "file": "releases/30595de6801b469e/src/result-animation.js",
+      "file": "releases/035d8b308ddd5536/src/result-animation.js",
       "sha256": "518f4424b715e20663ccf1f24266ef6fe88a642db8f422de76dcb89f32936ebb",
       "bytes": 4383
     },
     {
-      "file": "releases/30595de6801b469e/src/runtime-settings.js",
+      "file": "releases/035d8b308ddd5536/src/runtime-settings.js",
       "sha256": "f932427ce2f9391ad11730d27159e6cf28f743cfc0de06b16809d8ad84b6d9da",
       "bytes": 2519
     },
     {
-      "file": "releases/30595de6801b469e/src/settings-defaults.js",
+      "file": "releases/035d8b308ddd5536/src/settings-defaults.js",
       "sha256": "a3c1b1bef42234f3e9cc6965ebb0f9ad9bf83c6033b997956d1fe8aae53f1b21",
       "bytes": 885
     },
     {
-      "file": "releases/30595de6801b469e/src/storage.js",
+      "file": "releases/035d8b308ddd5536/src/storage.js",
       "sha256": "83255f4773df20564fe2a0fd48d7c5504eb79a89b539664627ca5e6541e08664",
       "bytes": 1164
     },
     {
-      "file": "releases/30595de6801b469e/src/styles.css",
+      "file": "releases/035d8b308ddd5536/src/styles.css",
       "sha256": "9adc3578efa959fad24ac444e1f459520d141687a5263bb2008b1f9a5b0b5e45",
       "bytes": 29903
     },
     {
-      "file": "releases/30595de6801b469e/src/support-dialog.js",
+      "file": "releases/035d8b308ddd5536/src/support-dialog.js",
       "sha256": "6951ea9acfd397ffe6369652235a31069cdca25ca6e83c2725424b8c5f362f80",
       "bytes": 4561
     },
     {
-      "file": "releases/30595de6801b469e/src/ui.js",
+      "file": "releases/035d8b308ddd5536/src/ui.js",
       "sha256": "41e3c7e0b68db118326c5b7ef1005c77ed97a9894a1383f8adcb708ec45f36de",
       "bytes": 16342
     },
     {
-      "file": "releases/30595de6801b469e/src/version.js",
+      "file": "releases/035d8b308ddd5536/src/version.js",
       "sha256": "93740ceb86ad860aeba886f590640ad73e34d0abf11f8e21bdf48e3d8ce41f4d",
       "bytes": 38
     },
     {
-      "file": "releases/30595de6801b469e/src/world.js",
+      "file": "releases/035d8b308ddd5536/src/world.js",
       "sha256": "e65178a49d990aa8d8e6e907dbe625beabcff922317beec98e690708d58bfd24",
       "bytes": 7775
     }

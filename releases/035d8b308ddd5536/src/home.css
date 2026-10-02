@@ -1,0 +1,98 @@
+/* Homepage only. The light, flat poster follows the supplied 4:5 motion reference.
+   Layer order: title → stickers → mascot trio; game is a separate full-screen view. */
+:root {
+  color-scheme: light;
+  --home-paper: #f5f6e8;
+  --home-ink: #254f3c;
+  --home-accent: #326447;
+  --home-yellow: #f3c63f;
+  --ease-out: cubic-bezier(.23,1,.32,1);
+  --ease-in-out: cubic-bezier(.77,0,.175,1);
+}
+html:has(.home-page) { min-height: 100%; background: var(--home-paper); }
+.home-page { margin: 0; min-height: 100dvh; color: var(--home-ink); background: var(--home-paper); font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; -webkit-tap-highlight-color: transparent; }
+.home-page [hidden] { display: none !important; }
+.jump-home, .jump-home *, .home-game-shell { box-sizing: border-box; }
+.jump-home {
+  position: relative;
+  width: min(100%, 590px);
+  margin-inline: auto;
+  padding: max(12px, env(safe-area-inset-top)) 22px max(14px, env(safe-area-inset-bottom));
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.home-topbar { width: 100%; display: flex; justify-content: space-between; align-items: center; color: #555b50; font-size: 12px; font-weight: 600; }
+.home-text-button { appearance: none; border: 0; background: none; color: #555b50; font: inherit; font-size: 12px; padding: 10px 0; min-height: 44px; min-width: 44px; cursor: pointer; touch-action: manipulation; }
+.home-text-button span { font-family: Arial, sans-serif; margin-left: 5px; font-size: 19px; vertical-align: -1px; }
+.poster { width: min(100%, calc((100dvh - 204px) * .8)); position: relative; flex-shrink: 0; }
+#poster-art { display: block; width: 100%; height: auto; overflow: hidden; }
+.title-cn { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; font-weight: 900; font-size: 233px; stroke: #326447; stroke-width: 2.7px; paint-order: stroke fill; }
+.title-en { font-family: "Arial Black", "Arial", sans-serif; font-weight: 900; font-size: 220px; letter-spacing: -17px; }
+.title-letter, .sticker-wrap, .direction-mark { transform-box: fill-box; transform-origin: center; }
+.sticker-text { font-family: "Arial Black", Arial, sans-serif; font-size: 19px; font-weight: 900; letter-spacing: -.6px; }
+.sticker-chinese { font-family: "Microsoft YaHei", sans-serif; font-size: 19px; letter-spacing: 1px; }
+#mascot-motion { transform-box: fill-box; transform-origin: center bottom; }
+.mascot-slot > svg { overflow: hidden; }
+.eye-pupil, .eye-lid, .tongue-motion { transform-box: view-box; transform-origin: 0 0; }
+.home-actions { width: min(100%, 336px); flex-shrink: 0; padding-top: 0; }
+.home-start {
+  appearance: none; width: 100%; min-height: 54px; padding: 12px 24px;
+  border: 1.5px solid var(--home-ink); border-radius: 999px; background: var(--home-ink); color: #fff2bd;
+  display: flex; align-items: center; justify-content: space-between;
+  font: inherit; font-size: 16px; font-weight: 700; letter-spacing: 2px;
+  cursor: pointer; touch-action: manipulation;
+  transition: transform 140ms var(--ease-out), background-color 180ms ease, opacity 140ms ease;
+}
+.home-start > span:last-child { font-family: Arial, sans-serif; font-size: 27px; font-weight: 400; line-height: 1; }
+.home-start:active { transform: scale(.98); }
+.home-start:disabled { opacity: .6; cursor: progress; }
+.home-modes { border: 0; padding: 0; margin: 9px 0 0; display: flex; justify-content: center; gap: 25px; }
+.home-modes label { display: flex; align-items: center; gap: 7px; min-height: 44px; font-size: 12px; color: #52584d; cursor: pointer; }
+.home-modes input { accent-color: var(--home-ink); width: 13px; height: 13px; margin: 0; cursor: pointer; }
+.home-modes input:checked + span { color: var(--home-ink); font-weight: 700; }
+.home-bottom { display: flex; justify-content: space-between; margin-top: -4px; }
+.home-help, .home-status, .home-error { font-size: 12px; line-height: 1.8; margin: 0; color: #52584d; }
+.home-help { padding: 5px 0 12px; }
+.home-status:empty { display: none; }
+.home-status, .home-error { color: #365a34; }
+.home-error { position: absolute; inset: auto 0 10%; text-align: center; }
+.jump-home button:focus-visible, .jump-home input:focus-visible, .home-game-back:focus-visible { outline: 2px solid var(--home-accent); outline-offset: 5px; }
+.home-game-shell { min-height: 100dvh; display: grid; place-items: center; background: #f5f5e9; position: relative; }
+/* Keep tilt available on the standalone development page, outside this shell. */
+body:not(.tilt-enabled) .home-game-shell .mode-card[data-mode="tilt"] { display: none; }
+.home-modes label[hidden] { display: none; }
+/* Layer 5 keeps the escape control above the game's header and panels. */
+.home-game-back { position: absolute; z-index: 5; top: max(10px, env(safe-area-inset-top)); left: max(12px, calc(50% - 300px)); appearance: none; border: 1px solid #263f3d33; border-radius: 999px; background: #faf8ed; color: #263f3d; min-height: 42px; padding: 0 14px; font: 12px "Microsoft YaHei", sans-serif; cursor: pointer; }
+.home-noscript { text-align: center; padding: 12px; }
+/* Export mode is the reference's exact 4:5 poster, without browser UI or controls. */
+.home-page.is-capture { min-height: 0; overflow: hidden; }
+.is-capture .jump-home { width: 100vw; height: 100vh; min-height: 0; padding: 0; display: block; }
+.is-capture .poster { width: 100%; height: 100%; }
+.is-capture .home-topbar, .is-capture .home-actions { display: none; }
+.is-capture #poster-art { width: 100%; height: 100%; }
+@media (hover: hover) and (pointer: fine) {
+  .home-start:hover { transform: translateY(-2px); background: #386346; }
+  .home-text-button:hover { color: var(--home-accent); }
+}
+@media (max-width: 600px) {
+  .jump-home { padding-inline: 20px; }
+  .poster { width: 100%; }
+  .home-actions { padding-top: 5px; }
+  .home-game-back { left: auto; right: 10px; top: 9px; min-height: 38px; }
+  .home-game-shell .brand-bar { padding-right: 90px; }
+  .home-game-shell .edition { display: none; }
+}
+@media (max-height: 730px) and (max-width: 600px) {
+  .poster { width: min(100%, calc((100dvh - 224px) * .8)); }
+  .home-topbar { font-size: 11px; }
+  .home-start { min-height: 48px; }
+  .jump-home { justify-content: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .home-start { transition: opacity 140ms ease, background-color 180ms ease; }
+  .home-start:active, .home-start:hover { transform: none; }
+}

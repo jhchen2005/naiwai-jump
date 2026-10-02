@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="205.815424" height="370" viewBox="76 57 440 791" data-content-bounds="76 57 440 791" role="img" aria-labelledby="left-title" overflow="hidden">
+  <title id="left-title">奶娃 · 侧身抱肚</title>
+  <desc>依据人物四视图生成的透明 PNG 人物图层；文字和布局可编辑，人物并非矢量路径。统一可见高度为 370。</desc>
+
+  <defs>
+    <radialGradient id="left-eye-iris" cx=".38" cy=".3" r=".78"><stop stop-color="#98bd69"/><stop offset=".6" stop-color="#80ab57"/><stop offset="1" stop-color="#6c9648"/></radialGradient>
+    <linearGradient id="left-eye-lid-color" x1="0" y1="0" x2=".2" y2="1"><stop stop-color="#fcd052"/><stop offset="1" stop-color="#f4bf3e"/></linearGradient>
+    <clipPath id="left-eye-far-clip"><ellipse rx="10.5" ry="23" transform="rotate(18)"/></clipPath>
+    <clipPath id="left-eye-far-visible"><path d="M11.5-22.5C-2.5-22.5-13.8-3.5-11.5 9.5-11 16-9 20-6.5 22.5-3.5 17.5 6.5-10.5 11.5-22.5Z"/></clipPath>
+    <clipPath id="left-eye-near-clip"><ellipse rx="24.1" ry="23.8"/></clipPath>
+    <linearGradient id="left-tongue-color" x1="0" y1="0" x2=".3" y2="1"><stop stop-color="#cf3f45"/><stop offset="1" stop-color="#e85d5b"/></linearGradient>
+    <clipPath id="left-tongue-clip" clipPathUnits="userSpaceOnUse"><rect x="-40" y="0" width="80" height="68"/></clipPath>
+  </defs>
+  <image href="mascot-left.webp" x="76" y="57" width="440" height="791" />
+  <g class="mascot-eye" data-eye="left-far" data-rx="10.5" data-ry="23" data-pupil-range="1.5" transform="translate(191.5 117.5)">
+    <g clip-path="url(#left-eye-far-visible)"><g clip-path="url(#left-eye-far-clip)">
+      <ellipse class="eye-iris" rx="10.5" ry="23" transform="rotate(18)" fill="url(#left-eye-iris)"/>
+      <g class="eye-pupil">
+        <ellipse cx="-5.3" cy="2" rx="5.4" ry="12.3" fill="#08100a"/>
+        <ellipse cx="-3.1399999999999997" cy="-4.888000000000001" rx="1.05" ry="1.1" fill="#f7f8dd" opacity=".7"/>
+      </g>
+      <g class="eye-lid" transform="translate(0 -26)">
+        <path d="M-48-80H48V0Q0 3-48 0Z" fill="url(#left-eye-lid-color)"/>
+        <path d="M-48 0Q0 3 48 0" fill="none" stroke="#68643a" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path class="eye-crease" d="M-8.925 .5Q0 5 8.925 .5" fill="none" stroke="#847343" stroke-width="1.4" stroke-linecap="round" opacity="0"/>
+    </g></g>
+  </g>
+  <g class="mascot-eye" data-eye="left-near" data-rx="24.1" data-ry="23.8" data-pupil-range="6" transform="translate(259.5 115.5)">
+    <g clip-path="url(#left-eye-near-clip)">
+      <ellipse class="eye-iris" rx="24.1" ry="23.8" fill="url(#left-eye-iris)"/>
+      <g class="eye-pupil">
+        <ellipse cx="-1.3" cy="1.3" rx="14.1" ry="14.1" fill="#08100a"/>
+        <ellipse cx="4.340000000000001" cy="-6.596000000000001" rx="2.1" ry="1.7" fill="#f7f8dd" opacity=".7"/>
+      </g>
+      <g class="eye-lid" transform="translate(0 -26.8)">
+        <path d="M-48-80H48V0Q0 3-48 0Z" fill="url(#left-eye-lid-color)"/>
+        <path d="M-48 0Q0 3 48 0" fill="none" stroke="#68643a" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+      <path class="eye-crease" d="M-20.485 .5Q0 5 20.485 .5" fill="none" stroke="#847343" stroke-width="1.4" stroke-linecap="round" opacity="0"/>
+    </g>
+  </g>
+  <!-- The original mouth is at source y=161; this entire expression is hidden until its cue. -->
+  <g class="mouth-expression" transform="translate(206 161)" opacity="0">
+    <path class="mouth-open" d="M-25 0C-12-1 8-1 24 1 13 6 2 9-9 8-17 7-22 4-25 0Z" fill="#253123"/>
+    <g clip-path="url(#left-tongue-clip)">
+      <g class="tongue-motion" transform="translate(0 -55)">
+        <path d="M-8 2C-9 15-14 27-14 37-14 45-10 50-3 50 4 50 8 45 9 37L13 2Z" fill="url(#left-tongue-color)" stroke="#94383c" stroke-width="1.3" stroke-linejoin="round"/>
+        <path d="M-.5 25C-3 32-4.5 38-4 44" fill="none" stroke="#ae3c42" stroke-width="1.2" stroke-linecap="round"/>
+      </g>
+    </g>
+    <path class="mouth-upper-line" d="M-25 0C-12-1 8-1 24 1" fill="none" stroke="#585238" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+</svg>
